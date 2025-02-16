@@ -1,0 +1,37 @@
+Задание: Нормализовать базу данных (1НФ — 3НФ), описав, к какой нормальной форме приводится таблица и почему таблица в этой нормальной форме изначально не находилась.
+
+Процесс нормализации:
+Чтобы нормализовать базу данных из 1НФ в 3НФ, нам нужно обеспечить следующее.
+
+Проблемы первой нормальной формы:
+Повторяющиеся группы: если бы несколько продуктов на транзакцию хранились в одной записи, это нарушило бы 1НФ.
+Атомарность: столбцы должны иметь атомарные значения. order_status, brand, product_line и т. д. уже являются атомарными единицами.
+
+-> Вывод: Текущие таблицы в основном соответствуют 1НФ.
+
+Проблемы второй нормальной формы:
+Частичная зависимость: в таблице транзакций “transaction” некоторые атрибуты (например, brand, product_line, product_class, product_size, list_price, standard_cost) зависят только от product_id, а не от transaction_id.
+
+->Тогда создадим таблицу продуктов “product”.
+
+Проблемы третьей нормальной формы (транзитивные зависимости):
+
+Транзитивные зависимости: в таблице клиентов “customer” штат зависит от почтового индекса, а страна всегда «Австралия».
+-> Тогда создадим таблицу местоположения “location”. Таблица “customer” будет ссылаться на эту таблицу с почтовым индексом вместо хранения избыточных данных.
+
+Таблица “customer”:
+job_title зависит от job_industry_category, а не от customer_id.
+-> Тогда вынесем должности в отдельную таблицу “job”: job_id, job_title, job_industry_category.
+В таблице “customer” вместо job_title и job_industry_category оставим job_id (FK).
+
+Таблица “product”: 
+brand, product_line, product_class, product_size зависят от product_id, но есть связь между brand и product_line.
+-> Тогда вынесем бренды и линии в отдельную таблицу “brand”: brand_id, brand_name, product_line. В таблице “product” оставим brand_id (FK).
+
+Финальная структура полностью в 3НФ:
+●	Transaction - transaction_id (PK), customer_id (FK), product_id (FK), transaction_date, online_order, order_status
+●	Customer - customer_id (PK), first_name, last_name, gender, DOB, job_id (FK), wealth_segment, deceased_indicator, owns_car, address, postcode (FK), property_valuation
+●	Product - product_id (PK), brand_id (FK), product_class, product_size, list_price, standard_cost
+●	Brand - brand_id (PK), brand_name, product_line
+●	Job - job_id (PK), job_title, job_industry_category
+●	Location - postcode (PK), state, country.
