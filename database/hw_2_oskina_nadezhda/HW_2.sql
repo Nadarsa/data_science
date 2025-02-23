@@ -1,4 +1,4 @@
--- Создание таблицы клиентов
+-- Создание таблицы клиентов.
 create table customer (
     customer_id int primary key,
     first_name varchar(50),
@@ -17,7 +17,7 @@ create table customer (
     property_valuation int
 ) ;
 
--- Создание таблицы транзакций
+-- Создание таблицы транзакций.
 create table transaction (
     transaction_id int primary key,
     product_id int,
@@ -34,10 +34,10 @@ create table transaction (
     foreign key (customer_id) references customer (customer_id)
 ) ;
 
--- Вывод всех записей таблицы клиентов
+-- Вывод всех записей таблицы клиентов.
 select * from customer c ;
 
--- Вывод всех записей таблицы транзакций
+-- Вывод всех записей таблицы транзакций.
 select * from transaction t ;
 
 -- Вывести все уникальные бренды, у которых стандартная стоимость выше 1500 долларов.
