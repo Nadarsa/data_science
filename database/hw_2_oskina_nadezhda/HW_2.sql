@@ -1,38 +1,38 @@
 -- Создание таблицы клиентов
 create table customer (
-    customer_id INT primary key,
-    first_name VARCHAR(50),
-    last_name VARCHAR(50),
-    gender VARCHAR(30),
-    dob VARCHAR(50),
-    job_title VARCHAR(50),
-    job_industry_category VARCHAR(50),
-    wealth_segment VARCHAR(50),
-    deceased_indicator VARCHAR(50),
-    owns_car VARCHAR(30),
-    address VARCHAR(50),
-    postcode VARCHAR(30),
-    state VARCHAR(30),
-    country VARCHAR(30),
-    property_valuation INT
-);
+    customer_id int primary key,
+    first_name varchar(50),
+    last_name varchar(50),
+    gender varchar(30),
+    dob varchar(50),
+    job_title varchar(50),
+    job_industry_category varchar(50),
+    wealth_segment varchar(50),
+    deceased_indicator varchar(50),
+    owns_car varchar(30),
+    address varchar(50),
+    postcode varchar(30),
+    state varchar(30),
+    country varchar(30),
+    property_valuation int
+) ;
 
 -- Создание таблицы транзакций
 create table transaction (
-    transaction_id INT primary key,
-    product_id INT,
-    customer_id INT NULL,
-    transaction_date VARCHAR(30),
-    online_order VARCHAR(30),
-    order_status VARCHAR(30),
-    brand VARCHAR(30),
-    product_line VARCHAR(30),
-    product_class VARCHAR(30),
-    product_size VARCHAR(30),
-    list_price FLOAT,
-    standard_cost FLOAT,
+    transaction_id int primary key,
+    product_id int,
+    customer_id int null,
+    transaction_date varchar(30),
+    online_order varchar(30),
+    order_status varchar(30),
+    brand varchar(30),
+    product_line varchar(30),
+    product_class varchar(30),
+    product_size varchar(30),
+    list_price float,
+    standard_cost float,
     foreign key (customer_id) references customer (customer_id)
-);
+) ;
 
 -- Вывод всех записей таблицы клиентов
 select * from customer c ;
@@ -90,3 +90,7 @@ left join customer c on c.customer_id = t.customer_id
 where t.transaction_date between '2017-07-07' and '2017-07-17'
 and t.order_status = 'Approved'
 and c.job_industry_category in ('IT', 'Health') ;
+
+
+
+
