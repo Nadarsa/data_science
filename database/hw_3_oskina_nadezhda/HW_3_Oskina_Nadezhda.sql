@@ -138,10 +138,10 @@ from (
         t.transaction_id,
         t.transaction_date,
         t.list_price,
-        row_number() over (partition by t.customer_id order by t.transaction_date asc, t.transaction_id asc) AS rn
+        row_number() over (partition by t.customer_id order by t.transaction_date asc, t.transaction_id asc) AS row_number
     from transaction t
 ) subquery
-where rn = 1;
+where row_number = 1;
 
 -- Вывести имена, фамилии и профессии клиентов, между транзакциями которых был максимальный интервал (интервал вычисляется в днях).
 with transaction_intervals as (
