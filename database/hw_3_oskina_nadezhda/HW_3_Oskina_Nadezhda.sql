@@ -43,7 +43,7 @@ select * from transaction t ;
 -- Вывести распределение (количество) клиентов по сферам деятельности, отсортировав результат по убыванию количества.
 select 
     job_industry_category, 
-    count(distinct customer_id) as customer_count -- на всякий случай считаем не количество записей, а количество уникальных id
+    count(distinct customer_id) as customer_count
 from customer
 group by job_industry_category
 order by customer_count desc;
