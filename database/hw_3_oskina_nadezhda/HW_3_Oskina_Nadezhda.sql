@@ -145,7 +145,7 @@ where row_number = 1;
 
 -- Вывести имена, фамилии и профессии клиентов, между транзакциями которых был максимальный интервал (интервал вычисляется в днях).
 with transaction_intervals as (
-    SELECT 
+    select 
         t.customer_id,
         c.first_name,
         c.last_name,
