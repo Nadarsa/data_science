@@ -17,3 +17,11 @@ advanced_ml/module_3/data/product_description.csv
 math_in_ml/data/Advertising.csv
 PROJECT_HH/data/ExchangeRates.csv
 advanced_ml/module_3/data/Electric_Car.csv
+machine_learning_basics/data/boston_house_prices.csv
+advanced_ml/module_5/data/dataset1.csv
+.gitignore
+.gitignore
+advanced_ml/module_5/data/dataset2.csv
+advanced_ml/module_5/data/dataset3.csv
+data_engineering/tg_bot_nadarsa_service.py
+data_engineering/yd_move_script.py
