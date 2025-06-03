@@ -28,3 +28,7 @@ data_engineering/yd_move_script.py
 data_engineering/yd_move_script.py
 data_engineering/data_engineering_project.ipynb
 data_engineering/test.ipynb
+deep_learning/project_1/mds-misis-dl-captchan/images_sub.npy
+deep_learning/project_1/mds-misis-dl-captchan/images.npy
+deep_learning/project_1/mds-misis-dl-captchan/sample_submission.csv
+deep_learning/project_1/mds-misis-dl-captchan/labels.npy
