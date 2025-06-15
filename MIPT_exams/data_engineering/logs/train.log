@@ -1,0 +1,4 @@
+[2025-06-14 19:30:31,718] INFO - Загружено 569 строк из /Users/nadezdaoskina/Документы/data_science/MIPT_exams/data_engineering/preprocessed/preprocessed_data.csv
+[2025-06-14 19:30:31,737] INFO - Модель успешно обучена и сохранена в /Users/nadezdaoskina/Документы/data_science/MIPT_exams/data_engineering/results/model.pkl
+[2025-06-14 19:30:38,871] INFO - Загружено 569 строк из /Users/nadezdaoskina/Документы/data_science/MIPT_exams/data_engineering/preprocessed/preprocessed_data.csv
+[2025-06-14 19:30:38,888] INFO - Модель успешно обучена и сохранена в /Users/nadezdaoskina/Документы/data_science/MIPT_exams/data_engineering/results/model.pkl

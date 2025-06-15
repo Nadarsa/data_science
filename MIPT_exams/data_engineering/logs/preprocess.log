@@ -1,0 +1,2 @@
+[2025-06-14 19:30:17,540] INFO - Файл прочитан: /Users/nadezdaoskina/Документы/data_science/MIPT_exams/data_engineering/data/breast_cancer.csv — 569 строк
+[2025-06-14 19:30:17,555] INFO - Предобработка завершена. Файл сохранён: /Users/nadezdaoskina/Документы/data_science/MIPT_exams/data_engineering/preprocessed/preprocessed_data.csv

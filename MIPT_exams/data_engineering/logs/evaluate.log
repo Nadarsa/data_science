@@ -1,0 +1,5 @@
+[2025-06-14 19:30:38,891] INFO - Метрики сохранены в /Users/nadezdaoskina/Документы/data_science/MIPT_exams/data_engineering/results/metrics.json
+[2025-06-14 19:30:38,891] INFO - accuracy: 0.9737
+[2025-06-14 19:30:38,891] INFO - precision: 0.9722
+[2025-06-14 19:30:38,891] INFO - recall: 0.9859
+[2025-06-14 19:30:38,891] INFO - f1_score: 0.979
