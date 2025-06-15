@@ -25,7 +25,7 @@ ML-задача: **бинарная классификация** (M = злока
 
 ```mermaid
 graph TD
-    A[Загрузка данных<br>load_data.py] --> B[🧹 Предобработка<br>preprocess.py]
+    A[Загрузка данных<br>load_data.py] --> B[Предобработка<br>preprocess.py]
     B --> C[Обучение модели<br>train_model.py]
     C --> D[Оценка модели<br>evaluate.py]
     D --> E[Сохранение результатов<br>results/, logs/]
@@ -171,30 +171,5 @@ Airflow:
 ## Скриншот работающего DAG
 
 ![alt text](image.png)
-
----
-
-## Требования и зависимости
-
-Установите зависимости с помощью команды:
-
-```bash
-pip install -r requirements.txt
-```
-
-Для запуска Airflow:
-
-```bash
-export AIRFLOW_HOME=~/airflow
-airflow db init
-airflow users create --username admin --password admin --firstname admin --lastname user --role Admin --email admin@example.com
-airflow webserver --port 8080
-airflow scheduler
-```
-
-Перейдите на [http://localhost:8080](http://localhost:8080) и активируйте DAG.
-
-
-См. `requirements.txt`
 
 ---
