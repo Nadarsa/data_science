@@ -85,7 +85,7 @@ make clean      # Очистка
 
 ```bash
 airflow dags list
-airflow dags trigger breast_cancer_ml_pipeline
+airflow dags trigger ml_pipeline_bash_operator
 airflow tasks test download_data 2025-06-14
 ```
 
